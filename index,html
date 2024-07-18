@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Node.js Documentation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav id="navbar">
+    <header>Node.js Documentation</header>
+    <a class="nav-link" href="#Introduction">Introduction</a>
+    <a class="nav-link" href="#Installation">Installation</a>
+    <a class="nav-link" href="#Modules">Modules</a>
+    <a class="nav-link" href="#File_System">File System</a>
+    <a class="nav-link" href="#HTTP">HTTP</a>
+  </nav>
+  <main id="main-doc">
+    <section id="Introduction" class="main-section">
+      <header>Introduction</header>
+      <p>Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows you to run JavaScript on the server.</p>
+      <code>console.log('Hello, Node.js');</code>
+      <ul>
+        <li>Asynchronous and event-driven</li>
+        <li>Fast and scalable</li>
+        <li>Single-threaded but highly concurrent</li>
+      </ul>
+    </section>
+    <section id="Installation" class="main-section">
+      <header>Installation</header>
+      <p>To install Node.js, visit the official website and download the installer for your operating system.</p>
+      <p>Alternatively, you can use a package manager like nvm, Homebrew, or apt-get.</p>
+      <code>nvm install node</code>
+      <code>brew install node</code>
+      <code>sudo apt-get install nodejs</code>
+      <ul>
+        <li>Download from the official site</li>
+        <li>Use a version manager like nvm</li>
+        <li>Use package managers like Homebrew or apt-get</li>
+      </ul>
+    </section>
+    <section id="Modules" class="main-section">
+      <header>Modules</header>
+      <p>Node.js has a module system that allows you to organize your code into reusable pieces.</p>
+      <p>To create a module, use the <code>module.exports</code> object:</p>
+      <code>module.exports = function() { console.log('Hello from module'); };</code>
+      <p>To include a module, use the <code>require</code> function:</p>
+      <code>const myModule = require('./myModule');</code>
+      <ul>
+        <li>Built-in modules</li>
+        <li>Third-party modules</li>
+        <li>Custom modules</li>
+      </ul>
+    </section>
+    <section id="File_System" class="main-section">
+      <header>File System</header>
+      <p>Node.js provides a built-in module called <code>fs</code> for working with the file system.</p>
+      <p>To read a file, use the <code>fs.readFile</code> function:</p>
+      <code>const fs = require('fs');</code>
+      <code>fs.readFile('path/to/file', 'utf8', (err, data) => { if (err) throw err; console.log(data); });</code>
+      <ul>
+        <li>Reading files</li>
+        <li>Writing files</li>
+        <li>Appending files</li>
+        <li>Deleting files</li>
+        <li>Renaming files</li>
+      </ul>
+    </section>
+    <section id="HTTP" class="main-section">
+      <header>HTTP</header>
+      <p>Node.js includes an HTTP module for creating web servers and handling HTTP requests and responses.</p>
+      <p>To create a simple HTTP server, use the <code>http.createServer</code> function:</p>
+      <code>const http = require('http');</code>
+      <code>const server = http.createServer((req, res) => { res.statusCode = 200; res.setHeader('Content-Type', 'text/plain'); res.end('Hello, world!'); });</code>
+      <code>server.listen(3000, () => { console.log('Server running at http://localhost:3000/'); });</code>
+      <ul>
+        <li>Creating a server</li>
+        <li>Handling requests</li>
+        <li>Sending responses</li>
+        <li>Setting headers</li>
+        <li>Listening on a port</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
